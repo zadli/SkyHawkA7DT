@@ -38,7 +38,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := exynos7880-a7y17lte_eur_defconfig
+TARGET_KERNEL_CONFIG := lineage-a7y17lte_eur_defconfig
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/universal7880
 
@@ -116,7 +116,7 @@ SHRP_REC := /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY
 # Use this flag only if your device is A/B
 SHRP_AB := false
 
- Recovery Type (It can be treble,normal,SAR) [Only for About Section]
+# Recovery Type (It can be treble,normal,SAR) [Only for About Section]
 SHRP_REC_TYPE := Normal
 
 # Recovery Type (It can be A/B or A_only) [Only for About Section]
