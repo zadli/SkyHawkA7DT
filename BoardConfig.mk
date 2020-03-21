@@ -38,7 +38,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := lineage-a7y17lte_eur_defconfig
+TARGET_KERNEL_CONFIG := lineage-a7y17lte_defconfig
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/universal7880
 
