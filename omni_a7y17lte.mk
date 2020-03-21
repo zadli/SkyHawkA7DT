@@ -1,11 +1,12 @@
+  
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2018 The TwrpBuilder Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,18 +15,14 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/a7y17lte
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Init
-PRODUCT_PACKAGES += \
-    init.target.rc
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
-# System.prop
-TARGET_SYSTEM_PROP += device/samsung/a7y17lte/system.prop
-
-$(call inherit-product, device/samsung/universal7880-common/common.mk)
-
-$(call inherit-product, vendor/samsung/a7y17lte/a7y17lte-vendor.mk)
+PRODUCT_DEVICE := a7y17lte
+PRODUCT_NAME := omni_a7y17lte
+PRODUCT_MODEL := SM-A720F
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
